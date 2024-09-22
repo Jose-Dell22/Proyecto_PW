@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', Arial, sans-serif;
+    background: linear-gradient(135deg, #0a0f12, #00c8ff);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+    padding: 20px 0;
+}
+
+.header-title {
+    display: flex;
+    justify-content: center; /* Centra el título */
+    align-items: center;
+    padding: 10px 20px;
+    color: #00c8ff;
+    position: relative; /* Para permitir el posicionamiento del icono */
+}
+
+.config-icon {
+    position: absolute; /* Posiciona el icono de configuración */
+    right: 20px; /* Espacio a la derecha */
+    top: 10px; /* Alineación vertical */
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 10px;
+    border: 2px solid transparent;
+    padding: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.navbar ul li:hover {
+    border-color: #00c8ff;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 160px 40px 20px;
+}
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+    width: 60%;
+    height: 75%;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+.login-form h1 {
+    margin-bottom: 30px;
+    font-size: 5vh;
+    color: #00c8ff;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00c8ff;
+    font-size: 5vh;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00c8ff;
+    border-radius: 4px;
+    font-size: 5vh;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-shadow: 0 0 5px #00c8ff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00c8ff;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    font-size: 4vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 0 0 5px #00c8ff, 0 0 10px #00c8ff;
+}
+
+button:hover {
+    background-color: #0099cc;
+    text-shadow: 0 0 10px #00c8ff, 0 0 20px #00c8ff;
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 5px 0; 
+    }
+    .login-form {
+        width: 90%; 
+        height: 75%; 
+        margin-top: 20px; 
+    }
+    .login-form h1 {
+        margin-bottom: -5px; 
+    }
+    .login-form h1,
+    .input-group label,
+    .input-group input,
+    button {
+        font-size: 4vh; 
+    }
+}
+
+@media (min-width: 651px) and (max-width: 950px) {
+    header {
+        padding: 25px 0; 
+    }
+    .login-form {
+        width: 80%; 
+        height: 93%; 
+        margin-top: 40px; 
+    }
+    .login-form h1 {
+        margin-bottom: 35px; 
+    }
+    .login-form h1,
+    .input-group label,
+    .input-group input {
+        font-size: 5vh; 
+    }
+    button {
+        font-size: 4vh; 
+        padding: 8px; 
+    }
+}
+
+@media (min-width: 951px) {
+    header {
+        padding: 10px 0; 
+    }
+    .login-form {
+        width: 70%; 
+        height: 85%; 
+    }
+    .login-form h1 {
+        margin-bottom: 30px; 
+    }
+    .login-form h1,
+    .input-group label,
+    .input-group input,
+    button {
+        font-size: 5vh; 
+    }
+}
+
