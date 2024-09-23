@@ -68,54 +68,9 @@ header {
     padding: 160px 40px 20px;
 }
 
-.image-gallery-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 50%;
-    border: 2px solid #00c8ff;
-    border-radius: 8px;
-    margin: 40px auto;
-}
-
-.image-gallery {
-    width: 100%;
-    height: 440px;
-    overflow: hidden;
-}
-
-.image-gallery img {
-    width: 100%;
-    height: 440px;
-    object-fit: cover;
-    transition: opacity 0.5s ease;
-}
-
-.arrows {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-.arrows button {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    transition: background 0.3s;
-}
-
-.arrows button:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
 .text-container {
     width: 50%;
     padding: 20px;
-    height: 470px;
     border: 2px solid #00c8ff;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -134,23 +89,38 @@ header {
     margin-bottom: 30px;
 }
 
-.progress-dots {
+.subscription-plans {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.plan {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00c8ff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.plan h3 {
+    color: #00c8ff;
+}
+
+.subscribe-button {
+    display: inline-block;
     margin-top: 10px;
-}
-
-.progress-dots .dot {
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    background-color: #ccc;
-    border-radius: 50%;
-    transition: background-color 0.3s;
-}
-
-.progress-dots .dot.active {
+    padding: 10px 15px;
     background-color: #00c8ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: #0094cc;
 }
 
 footer {
@@ -170,20 +140,10 @@ footer {
     cursor: pointer;
 }
 
-.fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
 @media (max-width: 840px) {
     .container {
         flex-direction: column;
         padding: 80px 20px 20px;
-    }
-
-    .image-gallery-wrapper {
-        margin-top: 100px;
-        max-width: 100%;
     }
 
     .text-container {
@@ -204,5 +164,14 @@ footer {
     .config-icon {
         right: 10px;
         top: 5px;
+    }
+
+    .subscription-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        margin-bottom: 20px;
     }
 }

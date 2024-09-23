@@ -90,24 +90,6 @@ header {
     text-align: center;
 }
 
-.join-message {
-    text-align: center;
-    color: #fff;
-    font-size: 4vh;
-    margin-bottom: 20px;
-}
-
-.join-message a {
-    color: #00c8ff;
-    text-decoration: underline;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.join-message a:hover {
-    color: #0099cc;
-}
-
 .input-group {
     margin-bottom: 15px;
 }
@@ -119,7 +101,8 @@ header {
     font-size: 5vh;
 }
 
-.input-group input {
+.input-group input,
+.input-group select {
     width: 100%;
     padding: 10px;
     border: 1px solid #00c8ff;
