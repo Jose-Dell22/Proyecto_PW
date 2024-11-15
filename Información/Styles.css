@@ -1,3 +1,16 @@
+:root {
+    --primary-color: #00c8ff;
+    --secondary-color: #0a0f12;
+    --background-gradient: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    --header-bg-color: rgba(0, 0, 0, 0.8);
+    --box-shadow-color: rgba(0, 200, 255, 0.5);
+    --text-color: white;
+    --border-color: var(--primary-color);
+    --input-bg: rgba(0, 0, 0, 0.7);
+    --link-hover-color: #0094cc;
+    --transition-speed: 0.3s;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +19,7 @@
 
 body {
     font-family: 'Orbitron', Arial, sans-serif;
-    background: linear-gradient(135deg, #0a0f12, #00c8ff);
+    background: var(--background-gradient);
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -17,10 +30,10 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
     z-index: 1;
-    box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+    box-shadow: 0 0 10px var(--box-shadow-color);
     padding: 20px 0;
 }
 
@@ -29,13 +42,19 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    color: #00c8ff;
+    color: var(--primary-color);
 }
 
 .config-icon {
     position: absolute;
     right: 20px;
     top: 10px;
+}
+
+.config-icon img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .navbar ul {
@@ -48,15 +67,15 @@ header {
     margin: 0 10px;
     border: 2px solid transparent;
     padding: 5px;
-    transition: border-color 0.3s ease;
+    transition: border-color var(--transition-speed) ease;
 }
 
 .navbar ul li:hover {
-    border-color: #00c8ff;
+    border-color: var(--primary-color);
 }
 
 .navbar ul li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
 }
@@ -71,20 +90,20 @@ header {
 .text-container {
     width: 50%;
     padding: 20px;
-    border: 2px solid #00c8ff;
+    border: 2px solid var(--primary-color);
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--input-bg);
     margin-left: 20px;
     margin-top: 40px;
     overflow-y: auto;
 }
 
 .text-container h2 {
-    color: #00c8ff;
+    color: var(--primary-color);
 }
 
 .text-container p {
-    color: white;
+    color: var(--text-color);
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -96,8 +115,8 @@ header {
 }
 
 .plan {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 2px solid #00c8ff;
+    background-color: var(--input-bg);
+    border: 2px solid var(--primary-color);
     border-radius: 8px;
     padding: 20px;
     width: 200px;
@@ -105,40 +124,35 @@ header {
 }
 
 .plan h3 {
-    color: #00c8ff;
+    color: var(--primary-color);
 }
 
 .subscribe-button {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #00c8ff;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background var(--transition-speed);
 }
 
 .subscribe-button:hover {
-    background-color: #0094cc;
+    background-color: var(--link-hover-color);
 }
 
 footer {
     text-align: center;
     padding: 20px;
     margin-top: 5px;
-    border: 2px solid #00c8ff;
+    border: 2px solid var(--primary-color);
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    background-color: var(--input-bg);
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
-.config-icon img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
 
 @media (max-width: 840px) {
     .container {

@@ -1,3 +1,17 @@
+:root {
+    --primary-color: #00c8ff;
+    --secondary-color: #0a0f12;
+    --background-gradient: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    --header-bg-color: rgba(0, 0, 0, 0.8);
+    --box-shadow-color: rgba(0, 200, 255, 0.5);
+    --text-color: white;
+    --border-color: var(--primary-color);
+    --input-bg: #1a1a1a;
+    --link-hover-color: #0099cc;
+    --overlay-bg: rgba(0, 0, 0, 0.8);
+    --transition-speed: 0.3s;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +20,7 @@
 
 body {
     font-family: 'Orbitron', Arial, sans-serif;
-    background: linear-gradient(135deg, #0a0f12, #00c8ff);
+    background: var(--background-gradient);
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -17,10 +31,10 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
     z-index: 1;
-    box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+    box-shadow: 0 0 10px var(--box-shadow-color);
     padding: 20px 0;
 }
 
@@ -28,40 +42,35 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #00c8ff;
-    position: relative;
-}
-
-.config-icon {
-    position: absolute;
-    right: 20px;
-    top: 10px;
+    color: var(--primary-color);
+    
 }
 
 .config-icon img {
     width: 30px; 
     height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
 
-.navbar ul {
-    list-style: none;
-    text-align: center;
-}
 
 .navbar ul li {
+    list-style: none;
+    text-align: center;
     display: inline-block;
     margin: 0 10px;
     border: 2px solid transparent;
     padding: 5px;
-    transition: border-color 0.3s ease;
+    transition: border-color var(--transition-speed) ease;
 }
 
 .navbar ul li:hover {
-    border-color: #00c8ff;
+    border-color: var(--primary-color);
 }
 
 .navbar ul li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
 }
@@ -74,9 +83,9 @@ header {
 }
 
 .login-form {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--overlay-bg);
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+    box-shadow: 0 0 15px var(--box-shadow-color);
     width: 60%;
     height: auto;
     backdrop-filter: blur(10px);
@@ -86,26 +95,26 @@ header {
 .login-form h1 {
     margin-bottom: 30px;
     font-size: 5vh;
-    color: #00c8ff;
+    color: var(--primary-color);
     text-align: center;
 }
 
 .join-message {
     text-align: center;
-    color: #fff;
+    color: var(--text-color);
     font-size: 4vh;
     margin-bottom: 20px;
 }
 
 .join-message a {
-    color: #00c8ff;
+    color: var(--primary-color);
     text-decoration: underline;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color var(--transition-speed) ease;
 }
 
 .join-message a:hover {
-    color: #0099cc;
+    color: var(--link-hover-color);
 }
 
 .input-group {
@@ -115,37 +124,37 @@ header {
 .input-group label {
     display: block;
     margin-bottom: 5px;
-    color: #00c8ff;
+    color: var(--primary-color);
     font-size: 5vh;
 }
 
 .input-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #00c8ff;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 5vh;
-    background-color: #1a1a1a;
-    color: #fff;
-    text-shadow: 0 0 5px #00c8ff;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--primary-color);
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background-color: #00c8ff;
+    background-color: var(--primary-color);
     border: none;
     border-radius: 4px;
-    color: #000;
+    color: black;
     font-size: 4vh;
     cursor: pointer;
-    transition: background-color 0.3s ease, text-shadow 0.3s ease;
-    text-shadow: 0 0 5px #00c8ff, 0 0 10px #00c8ff;
+    transition: background-color var(--transition-speed), text-shadow var(--transition-speed);
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
 }
 
 button:hover {
-    background-color: #0099cc;
-    text-shadow: 0 0 10px #00c8ff, 0 0 20px #00c8ff;
+    background-color: var(--link-hover-color);
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
 }
 
 .error-message {
