@@ -29,21 +29,19 @@ body {
 
 header {
     position: fixed;
-    top: 0;
+    text-align: center;
+    top: -10px;
     width: 100%;
     background-color: var(--header-bg-color);
     color: var(--text-color);
-    z-index: 1;
     box-shadow: 0 0 10px var(--box-shadow-color);
     padding: 20px 0;
 }
 
 .header-title {
-    display: flex;
     justify-content: center;
     align-items: center;
     color: var(--primary-color);
-    
 }
 
 .config-icon img {

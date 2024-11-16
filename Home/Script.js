@@ -1,9 +1,9 @@
 let currentIndex = 0;
 const images = [
-    '../Images/Proyecto_Robotica.jpg',
-    '../Images/Proyecto_Software.jpg',
-    '../Images/Proyecto_Software_2.jpg',
-    '../Images/Proyecto_Robotica_2.jpg',
+    '../Images/Robotic_machine.jpg',
+    '../Images/Robotic_machine_2.jpg',
+    '../Images/software_2.jpg',
+    '../Images/software.jpg',
 ];
 
 function changeImage(direction) {
