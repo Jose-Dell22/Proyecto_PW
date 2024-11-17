@@ -28,21 +28,20 @@ body {
 }
 
 header {
-    position: fixed;
-    text-align: center;
-    top: -10px;
+    position: relative;
     width: 100%;
     background-color: var(--header-bg-color);
     color: var(--text-color);
     box-shadow: 0 0 10px var(--box-shadow-color);
-    padding: 20px 0;
 }
 
 .header-title {
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    text-align: center;
+    padding: 10px 20px;
     color: var(--primary-color);
 }
+
 
 .config-icon img {
     width: 30px; 
@@ -54,7 +53,6 @@ header {
 
 
 .navbar ul li {
-    list-style: none;
     text-align: center;
     display: inline-block;
     margin: 0 10px;
@@ -64,13 +62,17 @@ header {
 }
 
 .navbar ul li:hover {
-    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--border-color);
+    border-radius: 5px;
 }
 
 .navbar ul li a {
     color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
+    text-align: center;
 }
 
 .container {

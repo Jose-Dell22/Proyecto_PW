@@ -17,3 +17,4 @@ toggleMusicButton.addEventListener('click', function () {
     toggleMusicButton.textContent = 'Reproducir Música';
   }
 });
+

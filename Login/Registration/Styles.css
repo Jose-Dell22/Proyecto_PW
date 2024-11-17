@@ -72,7 +72,10 @@ header {
 }
 
 .navbar ul li:hover {
-    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--border-color);
+    border-radius: 5px;
 }
 
 .navbar ul li a {

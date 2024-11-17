@@ -71,7 +71,10 @@ header {
 }
 
 .navbar ul li:hover {
-    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--border-color);
+    border-radius: 5px;
 }
 
 .navbar ul li a {
@@ -84,11 +87,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 160px 40px 20px;
 }
 
 .text-container {
-    width: 50%;
+    width: 60%;
     padding: 20px;
     border: 2px solid var(--primary-color);
     border-radius: 8px;
@@ -112,6 +114,10 @@ header {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+}
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px var(--box-shadow-color);
 }
 
 .plan {
