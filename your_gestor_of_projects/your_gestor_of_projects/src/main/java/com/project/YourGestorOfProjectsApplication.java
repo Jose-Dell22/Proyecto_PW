@@ -8,6 +8,7 @@ public class YourGestorOfProjectsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(YourGestorOfProjectsApplication.class, args);
+		
 	}
 
 }
