@@ -1,7 +1,12 @@
 {
     "configurations": [
-        
-
+        {
+            "type": "java",
+            "name": "JasperreportSpringBootApplication",
+            "request": "launch",
+            "mainClass": "co.edu.usco.pw.jasperreport_springBoot.JasperreportSpringBootApplication",
+            "projectName": ""
+        },
         {
             "type": "java",
             "name": "Spring Boot-YourGestorOfProjectsApplication<your_gestor_of_projects>",
